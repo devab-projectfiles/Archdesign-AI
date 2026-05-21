@@ -4,7 +4,7 @@ from src.backend.schemas.design_schema import DesignRequest
 
 def process_design_request(request: DesignRequest) -> dict:
     try:
-        result = generate_design_service(request.requirement)
+        result = generate_design_service(request.requirement, request.history)
         if "error" in result:
             raise HTTPException(status_code=500, detail=result["error"])
         return result

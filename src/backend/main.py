@@ -22,4 +22,4 @@ app.include_router(design_route.router)
 
 @app.get("/")
 def root_endpoint():
-    return {"message": "Welcome to AutoSysDesign Crew API. Go to /docs for Swagger UI."}
+    return {"message": "Welcome to ArchDesign AI Crew API. Go to /docs for Swagger UI."}

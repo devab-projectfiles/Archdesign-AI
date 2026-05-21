@@ -1,24 +1,24 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
     primary: {
-      main: '#8b5cf6', // Soft purple
-      light: '#a78bfa',
-      dark: '#7c3aed',
-      contrastText: '#fff',
+      main: "#0d9488", // Blueprint Teal
+      light: "#2dd4bf",
+      dark: "#0f766e",
+      contrastText: "#fff",
     },
     secondary: {
-      main: '#ec4899', // Pinkish accent
+      main: "#d97706", // Warm amber
     },
     background: {
-      default: mode === 'light' ? '#f8f9fa' : '#0f172a',
-      paper: mode === 'light' ? '#ffffff' : '#1e293b',
+      default: mode === "light" ? "#fbfaf7" : "#1F1F1E", // Warm ivory vs sleek dark graphite #1F1F1E
+      paper: mode === "light" ? "#ffffff" : "#2C2C2A",  // White paper vs sleek dark input/sidebar #2C2C2A
     },
     text: {
-      primary: mode === 'light' ? '#1e293b' : '#f8fafc',
-      secondary: mode === 'light' ? '#64748b' : '#cbd5e1',
+      primary: mode === "light" ? "#191919" : "#ecebe8", // Warm black vs warm ivory white
+      secondary: mode === "light" ? "#6b6a65" : "#aba8a2",
     },
   },
   typography: {
@@ -29,7 +29,7 @@ const getDesignTokens = (mode) => ({
     h4: { fontWeight: 600 },
     h5: { fontWeight: 600 },
     h6: { fontWeight: 600 },
-    button: { textTransform: 'none', fontWeight: 500 },
+    button: { textTransform: "none", fontWeight: 500 },
   },
   shape: {
     borderRadius: 12,
@@ -38,15 +38,15 @@ const getDesignTokens = (mode) => ({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '8px',
-          padding: '8px 16px',
+          borderRadius: "8px",
+          padding: "8px 16px",
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundImage: 'none', // Remove weird overlay in dark mode MUI
+          backgroundImage: "none", // Remove weird overlay in dark mode MUI
         },
       },
     },

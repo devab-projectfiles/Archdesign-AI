@@ -25,15 +25,17 @@ analyst = Agent(
     goal=agents_config["analyst"]["goal"],
     backstory=agents_config["analyst"]["backstory"],
     llm=llm,
-    verbose=True
+    verbose=False
 )
+
+
 
 engineer = Agent(
     role=agents_config["engineer"]["role"],
     goal=agents_config["engineer"]["goal"],
     backstory=agents_config["engineer"]["backstory"],
     llm=llm,
-    verbose=True
+    verbose=False
 )
 
 reviewer = Agent(
@@ -41,8 +43,9 @@ reviewer = Agent(
     goal=agents_config["reviewer"]["goal"],
     backstory=agents_config["reviewer"]["backstory"],
     llm=llm,
-    verbose=True
+    verbose=False
 )
+
 
 # ---------- Tasks ----------
 task1 = Task(
@@ -50,6 +53,7 @@ task1 = Task(
     expected_output=tasks_config["analyst_task"]["expected_output"],
     agent=analyst
 )
+
 
 task2 = Task(
     description=tasks_config["engineer_task"]["description"],
@@ -68,7 +72,7 @@ crew = Crew(
     agents=[analyst, engineer, reviewer],
     tasks=[task1, task2, task3],
     process=Process.sequential,
-    verbose=True
+    verbose=False
 )
 
 def run_crew(input_text: str):

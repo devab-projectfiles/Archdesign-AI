@@ -32,9 +32,9 @@ export const ChatService = {
     /**
      * Send a general design requirement to the AI Crew API.
      */
-    async submitDesignRequirement(requirement) {
+    async submitDesignRequirement(requirement, history = []) {
         try {
-            const response = await apiClient.post('/api/design/', { requirement });
+            const response = await apiClient.post('/api/design/', { requirement, history });
             return response.data;
         } catch (err) {
             console.error("Backend request failed:", err);

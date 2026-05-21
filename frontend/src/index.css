@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 html,
 body,
@@ -7,9 +7,9 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #fcebfa 0%, #fae8fc 50%, #e2dcfc 100%);
-  color: #1e293b;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #fbfaf7 0%, #f7f3eb 50%, #ebe6d9 100%);
+  color: #191919;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,8 +22,11 @@ body,
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d8b4fe, #a855f7);
-  box-shadow: 0 0 40px 10px rgba(168, 85, 247, 0.4), inset -10px -10px 20px rgba(0, 0, 0, 0.1), inset 10px 10px 20px rgba(255, 255, 255, 0.8);
+  background: radial-gradient(circle at 30% 30%, #5eead4, #0d9488);
+  box-shadow:
+    0 0 40px 10px rgba(13, 148, 136, 0.4),
+    inset -10px -10px 20px rgba(0, 0, 0, 0.1),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.8);
   margin: 0 auto;
   opacity: 0.9;
 }

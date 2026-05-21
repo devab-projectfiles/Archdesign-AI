@@ -27,6 +27,8 @@ export const useChat = () => {
 
         // 1. Add user message
         const userMsg = { id: Date.now(), role: 'user', content: text };
+        const previousMessages =
+            chats.find(chat => chat.id === targetChatId)?.messages || [];
 
         setChats(prev => prev.map(chat => {
             if (chat.id === targetChatId) {
@@ -37,7 +39,10 @@ export const useChat = () => {
 
         try {
             // 2. Fetch API
-            const aiResponseText = await ChatService.submitDesignRequirement(text);
+            const aiResponseText = await ChatService.submitDesignRequirement(
+                text,
+                previousMessages.map(({ role, content }) => ({ role, content }))
+            );
 
             // 3. Add AI response
             const aiMsg = { id: Date.now() + 1, role: 'assistant', content: aiResponseText };
